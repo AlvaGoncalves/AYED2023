@@ -1,0 +1,49 @@
+package P1;
+
+/*
+ * 2. Escriba un método de clase que dado un número n devuelva un nuevo arreglo de tamaño n
+ * con los n primeros múltiplos enteros de n mayores o iguales que 1.
+ * 
+ * Ejemplo: f(5) = [5; 10; 15; 20; 25]; f(k) = {n*k donde k : 1..k}
+ * 
+ * Agregue al programa la posibilidad de probar con distintos valores de n ingresandolos por
+ * teclado, mediante el uso de System.in. La clase Scanner permite leer de forma sencilla
+ * valores de entrada.
+*/
+
+import java.util.Scanner;
+public class Ej2 {
+	//private ArrayList<Integer> arreglo = new ArrayList<Integer>();
+	
+	public static int[] arregloDeMultiplos(Integer n) {
+		int vector[] = new int[5]; 
+		if(n != 0) {
+			int i = 0;
+			while(i < 5) {
+				vector[i] = (n * i);
+				System.out.println("{"+vector[i]+"}");
+				i++;
+			}	
+			
+		}
+		return vector;
+	}
+	
+	public static void main(String[] args) {
+		
+		Scanner s = new Scanner(System.in);
+		int v[] = new int[5];
+		System.out.println("Bienvenido al sistema de impresion de multiplos: ");
+		System.out.println("...");
+		System.out.println("Ingrese el numero de numero del que desea obtener los primeros 5 multiplos: ");
+		int n = s.nextInt();
+		System.out.println("Procesando...");
+		System.out.println("Usted ha ingresado el numero " + n);
+		System.out.println("...");
+		System.out.println("Multiplos Listos");
+		v.equals(Ej2.arregloDeMultiplos(n));
+		System.out.println("...");
+		System.out.println("Fin del programa");
+	}
+	
+}
